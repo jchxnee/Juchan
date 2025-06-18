@@ -1,0 +1,16 @@
+package com.kh.boot.controller;
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+//Bin에 class등록하는 방법으로 @Controller을 클래스에 부여한다.
+//@Controller -> @Component + Controlelr객체가 가질 수 있는 예외처리등의 기능을 포함하는 어노테이션
+@Controller
+public class HomeController {
+
+    @RequestMapping("/")
+    public String home(){
+        return "index";
+    }
+}

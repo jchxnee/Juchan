@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html;
+charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head>
+  <title>Title</title>
+  <style>
+    ul, ol, li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      cursor: pointer;
+      display: block;
+    }
+    .side-bar{
+      width: 230px;
+      height: 680px;
+      background: #FFC9A5;
+      border-radius: 15px;
+
+      position: relative;
+
+      left: 0px;
+      top: -15px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+    #menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: #005F5B;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    #menu > li{
+      margin-bottom: 60px;
+      position: relative;
+    }
+    #storage, #buying{
+      margin: 0;
+      padding: 0;
+    }
+    #storage, #buying > a {
+      margin: 0;
+    }
+    #storage-list, #buying-list{
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      font-size : 23px;
+      margin-left: 15px;
+    }
+    #storage:hover > #storage-list,
+    #buying:hover > #buying-list{
+      display: block;
+    }
+    #storage img, #buying img{
+      vertical-align: middle;
+    }
+
+
+    #admin-menu{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: #005F5B;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    #admin-menu>li{
+      margin-bottom: 35px;
+    }
+  </style>
+</head>
+<body>
+<!--<h2>본사 사이드바</h2>-->
+<div class="side-bar">
+  <ul id="admin-menu">
+    <li><a>대시보드</a></li>
+    <li><a>제품관리</a></li>
+    <li><a>매출현황</a></li>
+    <li><a>지점장 승인</a></li>
+    <li><a>직원 승인</a></li>
+    <li><a>입고처 관리</a></li>
+    <li><a>직원 정보</a></li>
+    <li><a style="color: #00A69F;">공지사항</a></li>
+  </ul>
+</div>
+
+</div>
+</div>
+
+
+</body>
+</html>

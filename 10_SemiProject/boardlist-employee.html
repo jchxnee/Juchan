@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공지사항</title>
+  <style>
+    main {
+    display: flex; /* flex로 정렬 */
+    align-items: flex-start; /* 사이드바와 테이블을 위쪽 정렬 */
+    gap: 20px; /* 사이드바와 테이블 간격 */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+    #sidebar {
+        width: 250px; /* 사이드바 너비 지정 */
+        min-width: 200px; /* 최소 너비 설정 */
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .content {
+        flex: 1; /* 남은 공간을 모두 차지 */
+        overflow-x: auto; /* 내용이 넘칠 경우 스크롤 허용 */
+        height: 680px;
+        background-color: #fcede3;
+        border-radius: 15px;
+    }
+
+    table {
+        width: 100%; /* 테이블을 부모 요소에 맞게 조정 */
+        border-collapse: collapse;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    td {
+        padding: 20px;
+    }
+
+    th {
+        background-color: #FFC9A5;
+        font-weight: bold;
+        border: none;
+        padding: 12px;
+    }
+    tbody tr {
+    border-bottom: 1px solid #000000;
+    width: 90%; 
+    }
+
+    tr {
+        background-color: #fcede3;
+    }
+
+    tr:hover {
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+    .write-btn{
+        background: white;
+        border: none;
+        width: 100px;
+        height: 45px;
+        font-size: 20px;
+        position: absolute;
+        bottom: -70px;
+        right: 70px;
+        border-radius: 8px;
+    }
+    .write-btn:hover{
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+    #modify{
+      background: #FFCBCB;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 50px;
+      height: 30px;
+    }
+    #modify:hover{
+      background: #fce6e6;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header"></div> <!-- 헤더 -->
+
+  <main>
+    <div id="sidebar"></div> <!-- 사이드바 -->
+
+    <div class="content">
+      <table>
+          <thead>
+              <tr>
+                  <th>번호</th>
+                  <th>작성자</th>
+                  <th>제목</th>
+                  <th>소속지점</th>
+                  <th>작성날짜</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>필독📢</td>
+                <td>관리자</td>
+                <td>각 지점별 철저히 재고확인</td>
+                <td>본사</td>
+                <td>2025-03-19</td>
+            </tr>
+              <tr>
+                  <td>1</td>
+                  <td>manager4</td>
+                  <td>이번 주 토요일(3/23) 매장 운영시간 변경</td>
+                  <td>학동점</td>
+                  <td>2025-03-17</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>manager5</td>
+                  <td>지점 행사 및 프로모션 공지</td>
+                  <td>한남점</td>
+                  <td>2025-03-12</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>manager12</td>
+                  <td>정전으로 인한 영업 조기종료</td>
+                  <td>반포점</td>
+                  <td>2025-03-09</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>manager1</td>
+                <td>직원 교육 및 회의 안내</td>
+                <td>강남점</td>
+                <td>2025-03-05</td>
+            </tr>
+          </tbody>
+      </table>
+
+    </div>
+
+  </main>
+
+  <div id="footer"></div> <!-- 푸터 -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      fetch("header-employee.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+
+      fetch("sidebar-employee.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("sidebar").innerHTML = data);
+    });
+  </script>
+
+</body>
+</html>

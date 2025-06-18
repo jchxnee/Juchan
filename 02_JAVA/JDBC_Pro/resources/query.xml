@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="insertReservation">
+		INSERT INTO RESERVATION
+		VALUES(?,?,?,?,?,?,?)
+	</entry>
+	<entry key="selectList">
+		SELECT * 
+		FROM RESERVATION
+		ORDER BY CDATE
+	</entry>
+	<entry key="cancelReservation">
+		DELETE 
+		FROM RESERVATION 
+		WHERE CID = ?
+	</entry>
+	<entry key="updateReservation">
+		UPDATE RESERVATION
+		SET CNAME = ?,
+			CDATE = ?,
+			CTIME = ?,
+			NUM_PEOPLE = ?,
+			PHONE = ?,
+			CREQUEST = ?
+		WHERE CID = ?
+	</entry>
+	<entry key="updateLess">
+		UPDATE RESERVATION
+		SET CDATE = ?,
+			CTIME = ?,
+			NUM_PEOPLE = ?
+		WHERE CID = ?
+	</entry>
+	
+	<entry key="selectByTime">
+   SELECT * 
+   FROM RESERVATION 
+   WHERE CDATE = ? AND 
+   CTIME BETWEEN ? AND ?
+</entry>
+	
+	<entry key="login">
+   SELECT * 
+   FROM LOGIN
+   WHERE USERID = ? AND USERPWD = ?
+</entry>
+	
+	<entry key="insertMember">
+		INSERT INTO LOGIN
+		VALUES(?,?,?,?,?,?)
+	</entry>
+	
+	<entry key="deleteMember">
+		DELETE FROM LOGIN
+		WHERE USERID = ? AND USERPWD = ?
+	</entry>
+	
+	<entry key="myreservation">
+   SELECT * 
+   FROM RESERVATION
+   WHERE CID = ?
+</entry>
+
+<entry key="updateMember">
+   UPDATE LOGIN
+   SET USERPWD = ?
+   WHERE USERID = ? AND USERPWD = ?
+</entry>
+
+<entry key="selectId">
+   SELECT *
+   FROM RESERVATION
+   WHERE CID = ?
+</entry>
+
+<entry key="saveCancelReason">
+    INSERT INTO CANCEL_REASONS (RESERVATION_ID, CANCEL_DATE, CANCEL_REASON)
+    VALUES (?, SYSTIMESTAMP, ?)
+</entry>
+
+<entry key="selectId">
+   SELECT *
+   FROM RESERVATION
+   WHERE CID = ?
+</entry>
+	
+</properties>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="z.practice3.Book"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="o.collection.list.practice.MusicView"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="o.collection.map.practice.MemberController"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="java.net.InetAddress"/>
+    <fullyQualifiedTypeName name="java.util.Objects"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="com.kh.jdbc.model.vo.Member"/>
+    <fullyQualifiedTypeName name="com.kh.jdbc.controller.MemberController"/>
+    <fullyQualifiedTypeName name="com.kh.jdbc.model.dao.MemberDao"/>
+    <fullyQualifiedTypeName name="kh.jdbc.project.jdbc.view.FoodMenu"/>
+    <fullyQualifiedTypeName name="kh.jdbc.project.model.vo.Member"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="kh.jdbc.model.vo.Member"/>
+</qualifiedTypeNameHistroy>

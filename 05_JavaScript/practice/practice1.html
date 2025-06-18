@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border: 1px solid black;
+            background: black;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3>문제1. 색상 선택후 변경 버튼을 클릭하면 색상이 변경되도록 만들어라</h3>
+    <div id="div1"></div>
+
+    <input type="color" id="selectColor">
+    <button onclick="changeCol()">변경</button>
+
+
+    <script>
+       function changeCol() {
+        let clr = document.querySelector('#div1');
+        let color = document.querySelector('#selectColor').value;
+        clr.style.background = color;
+       }
+    </script>
+
+
+
+    <h3>문제2. 버튼에 따른 크기조절이 가능하게 만들어 보세요.</h3>
+    <div id="div2"></div>
+    <button onclick="five()">50X50</button>
+    <button onclick="one()">100X100</button>
+    <button onclick="two()">200X200</button>
+
+    <script>
+      function five(){
+        let five = document.querySelector('#div2');
+        five.style.width = "50px";
+        five.style.height = "50px";
+      }
+      function one(){
+        let one = document.querySelector('#div2');
+        one.style.width = "100px";
+        one.style.height = "100px";
+      }
+      function two(){
+        let two = document.querySelector('#div2');
+        two.style.width = "200px";
+        two.style.height = "200px";
+      }
+
+    </script>
+</body>
+</html>

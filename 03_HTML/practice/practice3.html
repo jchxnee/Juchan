@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <fieldset>
+    <fieldset>
+        <legend>필수 입력 사항</legend>
+        <b>ID :</b> <input type="text" name="userId" placeholder="아이디 10글자이내" value="" maxlength="10" required>
+        <input type="button" value="중복확인"> <br>
+       <b>비밀번호  :</b>  <input type="password" name="userPwd" value="" placeholder="영문, 숫자, 문자, 특수문자포함" required> <br>
+        <b>비빌번호 확인 :</b> <input type="password" value=""> <br> <!--비밀번호 확인문자는 서버로 전송할 필요x name값을 미입력하면 됨-->
+        <b>Email : </b> <input type="email" name="userEmail" value=""> @ 
+        <select>
+            <option value="naver.com"> naver.com</option>
+            <option value="nate.com"> nate.com</option>
+            <option value="none"> 직접입력</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>    
+        프로필 사진 : <input type="file" name="file" name ="profile" value="파일 선택"><br><br>
+        <p>
+            성별 : <input type="radio" name="gender" value="man" id="man">
+                   <label for="man">남자</label>
+                   <input type="radio" name="gender" value="woman">
+                   <label for="man">여자</label>                   
+        </p>
+        
+            생년월일 : <input type="date"> <br> <br>
+        
+        <p>
+            취미 <br>
+            <input type="checkbox" name="hobby" id="baseball">
+            <label for="baseball">야구</label>
+            <input type="checkbox" name="hobby" id="basketball">
+            <label for="basketball">농구</label>
+            <input type="checkbox" name="hobby" id="soccer">
+            <label for="soccer">축구</label> <br>
+            <input type="checkbox" name="hobby" id="study">
+            <label for="study">공부</label>
+            <input type="checkbox" name="hobby" id="music">
+            <label for="music">음악감상</label> <br>
+            <input type="checkbox" name="hobby" id="else">
+            <label for="baseball">기타 : <input type="text"></label> <br>
+            자기소개 : <textarea rows="4" cols="30" none;"></textarea>
+        </p>
+    </fieldset>
+    <input type="button" name="member" value="회원가입">
+    <input type="reset" name="retry" value="다시입력">
+    <input type="button" name="previous" value="이전으로" onclick="history.back">
+</fieldset>
+</body>
+</html>

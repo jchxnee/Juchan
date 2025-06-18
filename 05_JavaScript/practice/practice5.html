@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <!-- jQueryUI 1.14.1 -->
+    <script
+    src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+    crossorigin="anonymous"></script>
+
+    <style>
+        .text{
+            width: 200px;
+        }
+        #count{
+            width: 70px;
+        }
+        #output{
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 30px;
+        }
+        textarea{
+            font-weight: bold;
+        }
+        h1{
+            padding: 10px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 20px;
+            background: #9fa092;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practice4</h1>
+    <fieldset id="info">
+        <legend>구매정보</legend>
+        <li>구매자 : <input type="text" placeholder="구매자의 이름을 입력하세요" class="text" id="buyer"></li>
+        <li>상품명 : <input type="text" placeholder="구매 상품 명을 입력하세요" class="text" id="name"></li>
+        <li>가격 : <input type="text" placeholder="구매 가격을 입력하세요" class="text" id="price"></li>
+        <li>구매 수량 : <input type="text" placeholder="최소 10" id="count"></li>
+        <li>납품 등급 : <input type="range" id="grade" min="1" max="9" step="2" value="1"></li>
+        <li>기타 사항 : <textarea id="ta"></textarea></li>
+    </fieldset>
+    <br>
+    <button id="printButton">입력 값 출력하기</button>
+    <div id="output"></div>
+
+    <script>
+        $("#printButton").click(function(){
+            let buyer = $("#buyer").val();
+            let name = $("#name").val();
+            let price = $("#price").val();
+            let count = $("#count").val();
+            let grade = $("#grade").val();
+            let ta = $("#ta").val();
+
+            $("#output").html(`구매자 명 : ${buyer}님 <br> 
+                               상품 명 : ${name} <br> 
+                               가격 : ${price} <br>
+                               구매수량 : ${count} <br>
+                               납품 등급 : ${grade}등급 <br>
+                               기타사항 : ${ta}`);
+        })
+    </script>
+</body>
+</html>

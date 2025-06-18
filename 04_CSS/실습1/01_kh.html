@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: "Noto Sans", serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style:normal;
+            font-variation-settings:"wdth" 100;
+            font-size: 12px;
+        }
+        #wrap{
+            width: 1000px;
+            height: 800px;
+            margin:0 auto;
+        }
+        div,form,input{
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #header{
+            display: flex;
+            width: 100%;
+            height: 15%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        #content{
+            width: 100%;
+            height: 55%;
+        }
+        #content_1{
+            width: 100%;
+            display: flex;
+            height: 30%;
+        }
+        #content_2{
+            width: 100%;
+            height: 70%;
+            display: flex;
+        }
+        #banner{
+            width: 70%;
+            height: 100%;
+        }
+        #login-form{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        
+        #login-form>*{
+            width: 100%;
+            height: 100%;
+        }
+        #login-form-input{
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+        }
+        #login-form-input>*{
+            height: 100%;
+            float: left;
+        }
+        #login-input-id-pwd{
+            width: 65%;
+            height: 50%;
+        }
+        #login-input-id-pwd>input{
+            width: 100%;
+            height: 100%;
+        }
+        #login-input-btn{
+           width: 35%;
+           height: 100%;
+        }
+        #login-input-btn>input[type="submit"]{
+            width: 100%;
+            height: 100%;
+        }
+        #login-form-etc{
+            height: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px
+        }
+        #login-form-etc>a{
+            font-size: 12px;
+            font-weight: 600;
+        }
+        #news{
+            width: 70%;
+            height: 100%;
+        }
+        #shopping{
+            width: 30%;
+            height: 100%;
+        }
+        #note{
+            width: 100%;
+            height: 20%;
+            display: flex;
+        }
+        #hello{
+            width: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 10px;
+            margin-top: 5px;
+        }
+        #category{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+            margin-left: 7px;
+        }
+        #car{
+            width: 100%;
+            height: 80%;        
+        }
+        
+        
+        #footer{
+            width: 100%;
+            height: 20%;
+        }
+        #footer>div{
+            width: 100%;
+        }
+
+        #footer_1{
+            height: 55px;
+            background: white;
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        #footer_1>div{
+            display: inline-block;
+            width: 100%;
+            max-width: 1130px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+
+        #footer_1 a{
+            font-size: 16px;
+            font-weight: 500;
+            margin: 3px;
+            padding: 0 2px;
+            font-weight: 600;
+        }
+
+        #footer_1 a:hover{
+            color: #FA1800;
+        }
+        #footer_2{
+            height: calc(100%-55px);
+            background: #fefefe;
+        }
+        #footer_2>p{
+            width: 100%;
+            max-width: 1130px;
+            margin: 10px;
+            font-size: 12px;
+            font-weight: 500;
+            padding-top: 10px;
+
+        }
+        #copy{
+            text-align: center;
+        }
+        #footer_2>p:nth-child(1){
+            font-size: 13px;
+            padding-bottom: 10px;
+        }
+        #footer_2>p:nth-child(3){
+            font-size: 11px;
+            padding-top: 10px;
+        }
+        #place{
+            margin-left: 5px;
+        }
+        #search{
+            width: 100%;
+            height: 100%;
+        }
+        #logo{
+            align-self: center;
+        }
+        #form{
+            display: flex;
+            width: 80%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        #form>input{
+            height: 30%;
+            width: 40%;
+        }
+        #form>button{
+            height: 30%;
+            width: 15%;
+            background-color: white;
+        }
+        #form>button>img{
+            width: 35%;
+            height: 30px;
+        }
+        #navigator{
+            width: 100%;
+            height: 10%;
+            display: flex;
+        }
+        ul,li{
+            display: block;
+            list-style: none;
+            flex-direction: column;
+            padding: 3px;
+        }
+        #navi{
+            height: 100%; 
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #navi>li{
+            display: flex;
+            float: left;
+            height: 100px;
+            text-align: center;
+            flex-grow: 1;
+        }
+        #navi a{
+            font-size: 20px;
+            font-weight: 500;
+            width: 100%;
+            height: 100%;
+            display: block;
+            line-height: 33px;
+        }
+        #navi a:hover{
+            color: rgb(99, 98, 98);
+            scale: 1.08;
+            padding: 0;
+            margin: 0;
+        }
+        #navi>li>ul{
+            margin-top: 30px;
+            display: none;
+        }
+        #navi>li>a:hover+ul{
+            display: block;
+        }
+        #navi>li>ul:hover{
+            display: block;
+        }
+        #navi>li>ul a{
+            font-size: 15px;
+        }
+        #navi>li>ul{
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="logo">
+               <img src="./logo.PNG" alt="">
+            </div>
+            <div id="search">
+                <form action="" id="form">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <button type="submit">
+                        <a href="www.naver.com"></a>
+                    <img src="./search.png" alt="" >
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div id="navigator">
+            <ul id="navi">
+                <li><a href="">교육과정</a>
+                    <ul>
+                        <li><a href="">SQL</a></li>
+                        <li><a href="">JAVA</a></li>
+                        <li><a href="">CSS</a></li>
+                        <li><a href="">JavaScript</a></li>
+                    </ul>
+                </li>
+                <li><a href="">교육원소개</a>
+                    <ul>
+                        <li><a href="">강사소개</a></li>
+                        <li><a href="">언론보도</a></li>
+                        <li><a href="">시설안내</a></li>
+                        <li><a href="">오시는길길</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">취업지원센터</a>
+                    <ul>
+                        <li><a href="">취업 프로세스</a></li>
+                        <li><a href="">학사공지</a></li>
+                        <li><a href="">취업현황</a></li>
+                        <li><a href="">협력기업</a></li>
+                    </ul>
+                </li>         
+                <li><a href="">산학연계</a>
+                    <ul>
+                        <li><a href="">기술자문위원</a></li>
+                        <li><a href="">실무자 인터뷰</a></li>
+                        <li><a href="">산학협력</a></li>
+                        <li><a href="">IT특강</a></li>
+                    </ul>
+                </li>
+                <li><a href="">상담센터</a>
+                    <ul>
+                        <li><a href="">온라인 상담</a></li>
+                        <li><a href="">방문상담 예약</a></li>
+                        <li><a href="">온라인 수강신청</a></li>
+                        <li><a href="">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+    
+    
+       </div>
+        <div id="content">
+            <div id="content_1">
+                <div id="banner">
+                <img src="./banner.PNG" width="100%">
+                </div>
+                <div id="login-form">
+                    <!--입력을 받아 요청을 할 수 있는 form태그-->
+                    <form action="" id="login-form-input">
+
+                    <!-- id,pwd 들어갈 div-->
+                    <div id="login-input-id-pwd">
+                    <input type="text" placeholder="아이디를 입력해주세요.">
+                    <input type="password" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+
+                    <!-- 로그인버튼이 들어갈 div -->
+                    <div id="login-input-btn">
+                        <input type="submit" value="로그인">
+                        </div>
+                    </form>
+                    <!-- 회원가입, id/pw찾기가 들어갈 div-->
+                    <div id="login-form-etc">
+                    <a href="">아이디 |</a>
+                    <a href="">비밀번호 찾기 |</a>
+                    <a href="">회원가입</a>
+                    </div>
+                </div>
+            </div>
+                    <div id="content_2">
+                        <div id="news">
+                            <div id="note">
+                                <div id="hello">안녕하세요 여기는 공지사항 제목이 들어오는 자리입니다.</div>
+                                <div id="category">경제 연예 사회</div>
+                            </div>
+                            <div id="car">
+                                <img src="./car.PNG" alt="" width="100%" height="100%">
+                            </div>
+                        </div>
+                        <div id="shopping">
+                            <img src="./shopping.PNG" alt="" width="100%" height="100%">
+                        </div>
+                    </div>
+        </div>    
+        <div id="footer">
+            <div id="footer_1">
+                <div>
+               <a href="">이용약관 |</a>
+               <a href="">개인정보취급방침 |</a>
+               <a href="">인재 채용 |</a>
+               <a href="">고객센터</a>
+                </div>       
+            </div>
+    
+            <div id="footer_2">
+            <p id="place">강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+                강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+            <p id="copy">Copyright © 1998-2025 KH Information Educational Institute All Right Reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
